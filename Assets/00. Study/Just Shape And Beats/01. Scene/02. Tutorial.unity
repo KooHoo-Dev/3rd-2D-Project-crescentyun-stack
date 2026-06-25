@@ -621,7 +621,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Just_Shape_And_Beats.PlayerController
   dashSpeed: 10
   dashTime: 0.2
-  dashCooltime: 0.5
+  dashCooltime: 0.2
 --- !u!1 &1547076199
 GameObject:
   m_ObjectHideFlags: 0

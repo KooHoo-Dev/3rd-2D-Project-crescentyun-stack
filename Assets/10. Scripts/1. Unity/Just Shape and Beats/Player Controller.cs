@@ -17,7 +17,7 @@ namespace Just_Shape_And_Beats
 
         public float dashSpeed = 5f;
         public float dashTime = 0.2f;
-        public float dashCooltime = 0.5f;
+        public float dashCooltime = 0.2f;
 
         private bool isDashing = false;
         private bool canDash = true;
@@ -29,7 +29,7 @@ namespace Just_Shape_And_Beats
             rb2D = GetComponent<Rigidbody2D>();
         }
 
-        private void FixedUpdate()
+        private void Update()
         {
             Dash();
             Move();
