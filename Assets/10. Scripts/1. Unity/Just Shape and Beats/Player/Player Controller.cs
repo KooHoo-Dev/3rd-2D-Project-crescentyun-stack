@@ -11,7 +11,9 @@ namespace Just_Shape_And_Beats
     {
           
         private SpriteRenderer spriteRenderer;
-        private Rigidbody2D rb2D;      
+        private Rigidbody2D rb2D;
+        private Collider2D plyaerCollider2D;
+
 
         private float moveSpeed = 5.0f;
 
@@ -19,7 +21,7 @@ namespace Just_Shape_And_Beats
         public float dashTime = 0.2f;
         public float dashCooltime = 0.2f;
 
-        private bool isDashing = false;
+        public bool isDashing = false;
         private bool canDash = true;
         private bool isColliding = false;
 
@@ -27,6 +29,7 @@ namespace Just_Shape_And_Beats
         {
             spriteRenderer = GetComponent<SpriteRenderer>();
             rb2D = GetComponent<Rigidbody2D>();
+            plyaerCollider2D = GetComponent<Collider2D>();
         }
 
         private void Update()
@@ -60,7 +63,7 @@ namespace Just_Shape_And_Beats
 
             if (Keyboard.current.spaceKey.wasPressedThisFrame && canDash == true)
             {
-                // 대시 & 대시중에 무적
+                // 대시 
                 Debug.Log("대쉬");
                 //rb2D.linearVelocity = new Vector2(5, 0);
                 float h = Input.GetAxisRaw("Horizontal");
@@ -75,8 +78,10 @@ namespace Just_Shape_And_Beats
                 }
 
                 StartCoroutine(DashCoroutine(dsahDirection));
-                
+
             }
+
+            // 끝나고 지울거
 
             else if (Keyboard.current.spaceKey.wasReleasedThisFrame == true)
             {
@@ -93,10 +98,14 @@ namespace Just_Shape_And_Beats
             canDash = false;
             isDashing = true;
 
+            // 무적판정
+            plyaerCollider2D.enabled = false;
+
             // 대시 시작
             rb2D.linearVelocity = direction * dashSpeed;
 
             yield return new WaitForSeconds(dashTime);
+
 
             // 대시 끝: 속도를 다시 0
             rb2D.linearVelocity = Vector2.zero;
@@ -104,6 +113,11 @@ namespace Just_Shape_And_Beats
 
             yield return new WaitForSeconds(dashCooltime);
             canDash = true;
+
+            // 무적 끝
+            plyaerCollider2D.enabled = true;
+
+
         }
               
 
@@ -112,7 +126,7 @@ namespace Just_Shape_And_Beats
             if ((isColliding == false) && (collider.gameObject.CompareTag("Obstacle")))
             {
                 // 장해물과의 충돌 로직
-                Debug.Log("123");
+                Debug.Log("충돌");
                 isColliding = true;
                 StartCoroutine(CollisionEffect()); 
             }

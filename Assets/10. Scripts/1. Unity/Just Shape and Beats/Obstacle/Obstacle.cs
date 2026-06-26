@@ -58,17 +58,13 @@ namespace Just_Shape_And_Beats
             //Destroy(gameObject);
         }
 
-        //private void OnTriggerEnter2D(Collider2D collision)
-        //{
-        //    if (collision.CompareTag("Player") && isDeadly)
-        //    {
-        //        PlayerController player = collision.GetComponent<PlayerController>();
-        //        if (player != null && !player.isInvincible)
-        //        {
-        //            Debug.Log("플레이어 피격! 콰쾅!");
-        //            // 여기에 플레이어 체력 감소, 튕겨나가는 이펙트 등을 추가하면 됩니다.
-        //        }
-        //    }
-        //}
+        private void OnTriggerEnter2D(Collider2D collision)
+        {
+            // 충돌한 오브젝트가 플레이어고, 장애물이 실체화된(Deadly) 상태일 때
+            if (collision.CompareTag("Player") && isDeadly)
+            {
+                
+            }
+        }
     }
 }
