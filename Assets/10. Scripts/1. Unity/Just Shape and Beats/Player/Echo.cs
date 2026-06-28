@@ -6,17 +6,17 @@ namespace Just_Shape_And_Beats
     public class EchoSprite : MonoBehaviour
     {
         public float fadeDuration = 0.2f; // 잔상이 사라지는 시간
-        private SpriteRenderer sr;
+        private SpriteRenderer spriteRenderer;
         private Color alphaColor;
         private float timeActive;
 
         void Start()
         {
-            sr = GetComponent<SpriteRenderer>();
+            spriteRenderer = GetComponent<SpriteRenderer>();
             // 잔상 색상을 반투명한 하늘색이나 흰색으로 지정
             alphaColor = new Color(0f, 0.75f, 1f, 0.5f);
-            sr.color = alphaColor;
-
+            spriteRenderer.color = alphaColor;
+           
             Destroy(gameObject, fadeDuration); // 시간 지나면 파괴
         }
 
