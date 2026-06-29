@@ -5,6 +5,8 @@ using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
 using UnityEngine.Rendering;
 
+
+
 namespace Just_Shape_And_Beats
 {
     public class PlayerController : MonoBehaviour
@@ -128,7 +130,9 @@ namespace Just_Shape_And_Beats
                 // 장해물과의 충돌 로직
                 Debug.Log("충돌");
                 isColliding = true;
-                StartCoroutine(CollisionEffect()); 
+                StartCoroutine(CollisionEffect());
+                
+
             }
         }
 

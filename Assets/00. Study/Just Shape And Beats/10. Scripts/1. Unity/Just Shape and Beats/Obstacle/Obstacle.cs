@@ -63,7 +63,9 @@ namespace Just_Shape_And_Beats
             // 충돌한 오브젝트가 플레이어고, 장애물이 실체화된(Deadly) 상태일 때
             if (collision.CompareTag("Player") && isDeadly)
             {
+                PlayerHP playerHp = collision.GetComponent<PlayerHP>();
                 
+                playerHp.TakeDamage();
             }
         }
     }
