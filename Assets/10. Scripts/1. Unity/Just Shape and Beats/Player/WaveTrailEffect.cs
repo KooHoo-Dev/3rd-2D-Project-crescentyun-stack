@@ -13,7 +13,7 @@ namespace Just_Shape_And_Beats
 
         private float timeLeft;
         private PlayerController playerController;
-        private Vector3 lastPosition; // 💡 이전 프레임의 위치를 기록할 변수
+        private Vector3 lastPosition; //  이전 프레임의 위치를 기록
 
         void Start()
         {
@@ -23,7 +23,7 @@ namespace Just_Shape_And_Beats
 
         void Update()
         {
-            // 💡 [핵심 변경] 물리 속도 대신, 지난 프레임의 위치와 현재 위치의 거리를 계산합니다.
+            //  물리 속도 대신, 지난 프레임의 위치와 현재 위치의 거리를 계산합니다.
             // 플레이어가 어떤 방식으로 이동하든(Translate, MovePosition, Velocity 등) 움직이기만 하면 무조건 감지됩니다.
             float moveDistance = Vector3.Distance(transform.position, lastPosition);
 

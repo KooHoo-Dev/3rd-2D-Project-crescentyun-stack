@@ -14,6 +14,12 @@ namespace Just_Shape_And_Beats
         private Collider2D collider2D;
         private bool isDeadly = false;
 
+
+        public float lifeTime = 6f;
+
+        Vector2 direction;
+        float speed;
+
         void Start()
         {
             spriteRenderer = GetComponent<SpriteRenderer>();
@@ -21,6 +27,14 @@ namespace Just_Shape_And_Beats
             collider2D.enabled = false; // 처음엔 충돌을 끄기
 
             StartCoroutine(ObstacleRoutine());
+        }
+
+
+        public void Init(Vector2 dir, float spd)
+        {
+            direction = dir.normalized;
+            speed = spd;
+            Destroy(gameObject, lifeTime);
         }
 
         IEnumerator ObstacleRoutine()

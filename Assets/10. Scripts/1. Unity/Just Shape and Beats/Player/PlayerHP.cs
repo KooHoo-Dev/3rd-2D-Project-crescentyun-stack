@@ -14,7 +14,7 @@ namespace Just_Shape_And_Beats
 
         private bool isHurt = false;
 
-        public Sprite[] healthSprites;
+        public Sprite[] HpSprites;
 
         private PlayerController playerController;
         private Rigidbody2D rb2D;
@@ -36,7 +36,6 @@ namespace Just_Shape_And_Beats
 
             currentHP--;
             Debug.Log($"플레이어 피격! 남은 체력: {currentHP}");
-
 
 
             UpdatePlayerSprite();
