@@ -76,8 +76,10 @@ namespace Just_Shape_And_Beats
         void SpawnRandomLaser()
         {
             if (layserPrefab == null || layserSpawnPoint == null) return;
-            GameObject layser = Instantiate(layserPrefab, layserSpawnPoint.position, Quaternion.identity);
             float angle = Random.Range(0f, 360f);
+            Quaternion rot = Quaternion.Euler(0f, 0f, angle);
+            GameObject layser = Instantiate(layserPrefab, layserSpawnPoint.position, rot);
+
         }
 
 
