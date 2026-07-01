@@ -27,6 +27,12 @@ namespace Just_Shape_And_Beats
         private bool canDash = true;
         private bool isColliding = false;
 
+
+        [Header("넉백 설정")]
+        public float knockbackForce = 8f;      // 넉백 세기
+        public float knockbackDuration = 0.3f; // 이동 잠금 시간
+
+        private bool isKnockedBack = false;    // 넉백 중이면 이동 불가
         private void Awake()
         {
             spriteRenderer = GetComponent<SpriteRenderer>();
@@ -130,11 +136,39 @@ namespace Just_Shape_And_Beats
                 // 장해물과의 충돌 로직
                 Debug.Log("충돌");
                 isColliding = true;
-                StartCoroutine(CollisionEffect());
                 
+                // 장애물 중심 → 플레이어 방향으로 넉백
+                Vector2 knockbackDir = (transform.position - collider.transform.position).normalized;
+
+                StartCoroutine(KnockbackCoroutine(knockbackDir));
+
+                StartCoroutine(CollisionEffect());
 
             }
         }
+
+    
+        public IEnumerator KnockbackCoroutine(Vector2 direction)
+        {
+            Debug.Log("넉백");
+            isKnockedBack = true;
+
+            float elapsed = 0f;
+            while (elapsed < knockbackDuration)
+            {
+                elapsed += Time.deltaTime;
+
+                // 시간이 지날수록 점점 느려지는 넉백 (자연스러운 감속)
+                float speed = Mathf.Lerp(knockbackForce, 0f, elapsed / knockbackDuration);
+                transform.position += (Vector3)(direction * speed * Time.deltaTime);
+
+                yield return null;
+            }
+
+            isKnockedBack = false;
+        }
+
+
 
         public IEnumerator CollisionEffect()
         {

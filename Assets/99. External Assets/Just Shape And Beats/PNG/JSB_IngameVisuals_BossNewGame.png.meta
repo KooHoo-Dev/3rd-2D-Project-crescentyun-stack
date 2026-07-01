@@ -1,0 +1,1402 @@
+fileFormatVersion: 2
+guid: 4d6b802a2aecdce43b7ffe1f3116c78c
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: JSB_IngameVisuals_BossNewGame_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1691
+        width: 2405
+        height: 2405
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 839240b998c4f8641bbc33b82a52ce1c
+      internalID: 1225653918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JSB_IngameVisuals_BossNewGame_1
+      rect:
+        serializedVersion: 2
+        x: 2407
+        y: 2699
+        width: 1065
+        height: 1062
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4ce8955f7bcc02439fa1bd09cae6d2d
+      internalID: -111081881
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JSB_IngameVisuals_BossNewGame_2
+      rect:
+        serializedVersion: 2
+        x: 3852
+        y: 2984
+        width: 196
+        height: 198
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 196, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72d17708b423e7c45866ec8ff44a7df0
+      internalID: -16529730
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JSB_IngameVisuals_BossNewGame_3
+      rect:
+        serializedVersion: 2
+        x: 4039
+        y: 2669
+        width: 54
+        height: 102
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16b85375a8419cf48823bca450e6a78c
+      internalID: 888593554
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JSB_IngameVisuals_BossNewGame_4
+      rect:
+        serializedVersion: 2
+        x: 3267
+        y: 1841
+        width: 752
+        height: 854
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 171f23488c957724789a4b825351a5d9
+      internalID: 1882219211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JSB_IngameVisuals_BossNewGame_5
+      rect:
+        serializedVersion: 2
+        x: 3484
+        y: 2392
+        width: 548
+        height: 368
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27e9aa09da199a1409da9ab0aa0557d2
+      internalID: -1121231611
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JSB_IngameVisuals_BossNewGame_6
+      rect:
+        serializedVersion: 2
+        x: 3470
+        y: 2015
+        width: 552
+        height: 367
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bfb026a87ad7f4049bfb2d112f9e4244
+      internalID: 1788255615
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JSB_IngameVisuals_BossNewGame_7
+      rect:
+        serializedVersion: 2
+        x: 4027
+        y: 2343
+        width: 68
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7fa40b481bd4c9c408d4ad337af44324
+      internalID: -58688531
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JSB_IngameVisuals_BossNewGame_8
+      rect:
+        serializedVersion: 2
+        x: 3861
+        y: 1835
+        width: 18
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a6d9a04bd868eb4e99fc4c76d71e367
+      internalID: 165645621
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JSB_IngameVisuals_BossNewGame_9
+      rect:
+        serializedVersion: 2
+        x: 4065
+        y: 1847
+        width: 18
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ab366a3acaf14e438522f74a581144d
+      internalID: 1717396326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JSB_IngameVisuals_BossNewGame_10
+      rect:
+        serializedVersion: 2
+        x: 3881
+        y: 1821
+        width: 18
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89ac74cb917619a42b098a72bc230d82
+      internalID: 1804987864
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JSB_IngameVisuals_BossNewGame_11
+      rect:
+        serializedVersion: 2
+        x: 3899
+        y: 1791
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea707f66e84b15a4f88f18c964d64fc6
+      internalID: 404272717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JSB_IngameVisuals_BossNewGame_12
+      rect:
+        serializedVersion: 2
+        x: 3929
+        y: 1773
+        width: 16
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7124b4f632c9d464cab43b3b80304fb7
+      internalID: 1291636348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JSB_IngameVisuals_BossNewGame_13
+      rect:
+        serializedVersion: 2
+        x: 3945
+        y: 1753
+        width: 14
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: baa70e1a657e31d4a800340e816399af
+      internalID: -832129541
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JSB_IngameVisuals_BossNewGame_14
+      rect:
+        serializedVersion: 2
+        x: 3957
+        y: 1733
+        width: 14
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3613bc0633db02a458a775d4b30a2ecd
+      internalID: 1171727766
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JSB_IngameVisuals_BossNewGame_15
+      rect:
+        serializedVersion: 2
+        x: 3969
+        y: 1711
+        width: 12
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b61de9d927f5514db8712a44be727ea
+      internalID: 2114817583
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JSB_IngameVisuals_BossNewGame_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 1611
+        height: 1695
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be87bf285eaacbb409a3e7aa5425f757
+      internalID: 601117231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JSB_IngameVisuals_BossNewGame_17
+      rect:
+        serializedVersion: 2
+        x: 3977
+        y: 1687
+        width: 12
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 151e92705b1aaa842afd414c4b640d95
+      internalID: -510527722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JSB_IngameVisuals_BossNewGame_19
+      rect:
+        serializedVersion: 2
+        x: 3985
+        y: 1665
+        width: 10
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57b250d0096a09844af9166ce359f3f5
+      internalID: -301853941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JSB_IngameVisuals_BossNewGame_20
+      rect:
+        serializedVersion: 2
+        x: 3989
+        y: 1641
+        width: 10
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02f9def19f9823e4b922a1ca7a7d1f7c
+      internalID: 654755233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JSB_IngameVisuals_BossNewGame_21
+      rect:
+        serializedVersion: 2
+        x: 3991
+        y: 1617
+        width: 10
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93e13e137ac14484f8a7aca24dd400de
+      internalID: 74285573
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JSB_IngameVisuals_BossNewGame_22
+      rect:
+        serializedVersion: 2
+        x: 3131
+        y: 1283
+        width: 329
+        height: 317
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f2e0787d977edd4a997256f3bb8c24c
+      internalID: -849534399
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JSB_IngameVisuals_BossNewGame_23
+      rect:
+        serializedVersion: 2
+        x: 3991
+        y: 1593
+        width: 10
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6429eb4e9873acf49819d96c42403922
+      internalID: 1323215118
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JSB_IngameVisuals_BossNewGame_24
+      rect:
+        serializedVersion: 2
+        x: 3989
+        y: 1569
+        width: 10
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d70d4f6e5daff3f42858bfc87baaf98a
+      internalID: 1371375665
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JSB_IngameVisuals_BossNewGame_25
+      rect:
+        serializedVersion: 2
+        x: 3985
+        y: 1545
+        width: 10
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 431070589c613d640b4c8dc1b0363c49
+      internalID: -1353594386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JSB_IngameVisuals_BossNewGame_26
+      rect:
+        serializedVersion: 2
+        x: 3979
+        y: 1523
+        width: 12
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28347babd975d3547b88b5ffd7598f25
+      internalID: 1721828609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JSB_IngameVisuals_BossNewGame_27
+      rect:
+        serializedVersion: 2
+        x: 3969
+        y: 1501
+        width: 14
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5da1a97d37e26f04d93553db649e2527
+      internalID: -1169970115
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JSB_IngameVisuals_BossNewGame_28
+      rect:
+        serializedVersion: 2
+        x: 3959
+        y: 1479
+        width: 14
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5db0e26144a991488fd5b2aa6fcbc65
+      internalID: 1957923984
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JSB_IngameVisuals_BossNewGame_29
+      rect:
+        serializedVersion: 2
+        x: 3947
+        y: 1459
+        width: 14
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41bf1d4f498bb8847923691dacef67e3
+      internalID: 1255381329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JSB_IngameVisuals_BossNewGame_30
+      rect:
+        serializedVersion: 2
+        x: 3917
+        y: 1421
+        width: 16
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6cf1284841f4614da90e524c66349ba
+      internalID: 1143525039
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JSB_IngameVisuals_BossNewGame_31
+      rect:
+        serializedVersion: 2
+        x: 3931
+        y: 1439
+        width: 16
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8803a0f3f852b4146a065df86bd43108
+      internalID: -1169534129
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JSB_IngameVisuals_BossNewGame_34
+      rect:
+        serializedVersion: 2
+        x: 3529
+        y: 1395
+        width: 36
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83c4041d143fa744d830e1ea26e66672
+      internalID: 1553069386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JSB_IngameVisuals_BossNewGame_35
+      rect:
+        serializedVersion: 2
+        x: 3881
+        y: 1389
+        width: 18
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2140a051ea638994d8ba5bc907512d3d
+      internalID: 1890874965
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JSB_IngameVisuals_BossNewGame_36
+      rect:
+        serializedVersion: 2
+        x: 3899
+        y: 1405
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d483cbd1ddebdd48a12588e18bfd159
+      internalID: 24838116
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JSB_IngameVisuals_BossNewGame_37
+      rect:
+        serializedVersion: 2
+        x: 3565
+        y: 1381
+        width: 20
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2831e646f5e1a0040850ec35a43c4e2f
+      internalID: -1240364857
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JSB_IngameVisuals_BossNewGame_38
+      rect:
+        serializedVersion: 2
+        x: 3587
+        y: 1369
+        width: 18
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f507e5baacca4b4586e0082b7e1a326
+      internalID: -1428461168
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JSB_IngameVisuals_BossNewGame_39
+      rect:
+        serializedVersion: 2
+        x: 3861
+        y: 1377
+        width: 18
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3ebc23ebdee9bd4190141d03451c4e5
+      internalID: 1757735878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JSB_IngameVisuals_BossNewGame_40
+      rect:
+        serializedVersion: 2
+        x: 3607
+        y: 1358
+        width: 20
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7be7ae5e8631f2439e595c2c4c3c8d8
+      internalID: -171120519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JSB_IngameVisuals_BossNewGame_41
+      rect:
+        serializedVersion: 2
+        x: 3817
+        y: 1355
+        width: 20
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a51e1e22a5c731c40aba93537692e6ed
+      internalID: 1278424719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JSB_IngameVisuals_BossNewGame_42
+      rect:
+        serializedVersion: 2
+        x: 3839
+        y: 1365
+        width: 20
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46b48e246dd750844a6aba4db0638494
+      internalID: 16627309
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JSB_IngameVisuals_BossNewGame_45
+      rect:
+        serializedVersion: 2
+        x: 3437
+        y: 737
+        width: 659
+        height: 614
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd7f794314ba5ee43adfca6eeeb1d3ac
+      internalID: -344632500
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JSB_IngameVisuals_BossNewGame_46
+      rect:
+        serializedVersion: 2
+        x: 3629
+        y: 1350
+        width: 20
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b783216d1906ed440b32a106a4c2fcaa
+      internalID: 1546075876
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JSB_IngameVisuals_BossNewGame_47
+      rect:
+        serializedVersion: 2
+        x: 3653
+        y: 1345
+        width: 18
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09a18252fe9f8b541b8b62e4e3c7eb0a
+      internalID: 1289022884
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JSB_IngameVisuals_BossNewGame_48
+      rect:
+        serializedVersion: 2
+        x: 3771
+        y: 1343
+        width: 20
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f6b3af10144fcd4ca2d05e06b3e5f8d
+      internalID: -2144729046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JSB_IngameVisuals_BossNewGame_49
+      rect:
+        serializedVersion: 2
+        x: 3795
+        y: 1347
+        width: 20
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a43be0fa50a57354eb52fd73a5d01aac
+      internalID: 1442030139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JSB_IngameVisuals_BossNewGame_50
+      rect:
+        serializedVersion: 2
+        x: 1611
+        y: 907
+        width: 26
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d15d175b6d5dda24fa34198305d69260
+      internalID: -1618607732
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JSB_IngameVisuals_BossNewGame_51
+      rect:
+        serializedVersion: 2
+        x: 1681
+        y: 871
+        width: 34
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc425ac7f5710f14e9ed6c93517cfd52
+      internalID: -48132961
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JSB_IngameVisuals_BossNewGame_52
+      rect:
+        serializedVersion: 2
+        x: 1890
+        y: 848
+        width: 401
+        height: 360
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc5a367b376ffa9479d04f0c25c2742f
+      internalID: -464782707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JSB_IngameVisuals_BossNewGame_53
+      rect:
+        serializedVersion: 2
+        x: 3087
+        y: 0
+        width: 990
+        height: 1022
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78acab59f5c24cb4ba792a283c1924fc
+      internalID: -904536752
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JSB_IngameVisuals_BossNewGame_54
+      rect:
+        serializedVersion: 2
+        x: 1771
+        y: 861
+        width: 30
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dcbf53174775e3541bc081776cf9f154
+      internalID: 1714459630
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JSB_IngameVisuals_BossNewGame_55
+      rect:
+        serializedVersion: 2
+        x: 1625
+        y: 773
+        width: 49
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6967585fa1d20647abd8585a8bae0b7
+      internalID: -1849915942
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JSB_IngameVisuals_BossNewGame_56
+      rect:
+        serializedVersion: 2
+        x: 1701
+        y: 767
+        width: 58
+        height: 58
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0cb3f01f03a0fab4cb03b5ce7ea98fb7
+      internalID: -1682422277
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JSB_IngameVisuals_BossNewGame_57
+      rect:
+        serializedVersion: 2
+        x: 1839
+        y: 815
+        width: 38
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c6fffc7e8e438a49a6e6ba6ff75653d
+      internalID: 1024575606
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JSB_IngameVisuals_BossNewGame_58
+      rect:
+        serializedVersion: 2
+        x: 1607
+        y: 109
+        width: 474
+        height: 572
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca02b96f858e340409b2809145e04980
+      internalID: 1613781088
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JSB_IngameVisuals_BossNewGame_59
+      rect:
+        serializedVersion: 2
+        x: 1233
+        y: 0
+        width: 414
+        height: 85
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a580108ce1c1c124ab4fe9f8b1c5ad56
+      internalID: 1529853301
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 81ee553bafad66c41ad0635ab2ec4116
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      JSB_IngameVisuals_BossNewGame_0: 1225653918
+      JSB_IngameVisuals_BossNewGame_1: -111081881
+      JSB_IngameVisuals_BossNewGame_10: 1804987864
+      JSB_IngameVisuals_BossNewGame_11: 404272717
+      JSB_IngameVisuals_BossNewGame_12: 1291636348
+      JSB_IngameVisuals_BossNewGame_13: -832129541
+      JSB_IngameVisuals_BossNewGame_14: 1171727766
+      JSB_IngameVisuals_BossNewGame_15: 2114817583
+      JSB_IngameVisuals_BossNewGame_16: 601117231
+      JSB_IngameVisuals_BossNewGame_17: -510527722
+      JSB_IngameVisuals_BossNewGame_18: -565520186
+      JSB_IngameVisuals_BossNewGame_19: -301853941
+      JSB_IngameVisuals_BossNewGame_2: -16529730
+      JSB_IngameVisuals_BossNewGame_20: 654755233
+      JSB_IngameVisuals_BossNewGame_21: 74285573
+      JSB_IngameVisuals_BossNewGame_22: -849534399
+      JSB_IngameVisuals_BossNewGame_23: 1323215118
+      JSB_IngameVisuals_BossNewGame_24: 1371375665
+      JSB_IngameVisuals_BossNewGame_25: -1353594386
+      JSB_IngameVisuals_BossNewGame_26: 1721828609
+      JSB_IngameVisuals_BossNewGame_27: -1169970115
+      JSB_IngameVisuals_BossNewGame_28: 1957923984
+      JSB_IngameVisuals_BossNewGame_29: 1255381329
+      JSB_IngameVisuals_BossNewGame_3: 888593554
+      JSB_IngameVisuals_BossNewGame_30: 1143525039
+      JSB_IngameVisuals_BossNewGame_31: -1169534129
+      JSB_IngameVisuals_BossNewGame_32: -414247906
+      JSB_IngameVisuals_BossNewGame_33: -1712289297
+      JSB_IngameVisuals_BossNewGame_34: 1553069386
+      JSB_IngameVisuals_BossNewGame_35: 1890874965
+      JSB_IngameVisuals_BossNewGame_36: 24838116
+      JSB_IngameVisuals_BossNewGame_37: -1240364857
+      JSB_IngameVisuals_BossNewGame_38: -1428461168
+      JSB_IngameVisuals_BossNewGame_39: 1757735878
+      JSB_IngameVisuals_BossNewGame_4: 1882219211
+      JSB_IngameVisuals_BossNewGame_40: -171120519
+      JSB_IngameVisuals_BossNewGame_41: 1278424719
+      JSB_IngameVisuals_BossNewGame_42: 16627309
+      JSB_IngameVisuals_BossNewGame_43: -1601135334
+      JSB_IngameVisuals_BossNewGame_44: -215999926
+      JSB_IngameVisuals_BossNewGame_45: -344632500
+      JSB_IngameVisuals_BossNewGame_46: 1546075876
+      JSB_IngameVisuals_BossNewGame_47: 1289022884
+      JSB_IngameVisuals_BossNewGame_48: -2144729046
+      JSB_IngameVisuals_BossNewGame_49: 1442030139
+      JSB_IngameVisuals_BossNewGame_5: -1121231611
+      JSB_IngameVisuals_BossNewGame_50: -1618607732
+      JSB_IngameVisuals_BossNewGame_51: -48132961
+      JSB_IngameVisuals_BossNewGame_52: -464782707
+      JSB_IngameVisuals_BossNewGame_53: -904536752
+      JSB_IngameVisuals_BossNewGame_54: 1714459630
+      JSB_IngameVisuals_BossNewGame_55: -1849915942
+      JSB_IngameVisuals_BossNewGame_56: -1682422277
+      JSB_IngameVisuals_BossNewGame_57: 1024575606
+      JSB_IngameVisuals_BossNewGame_58: 1613781088
+      JSB_IngameVisuals_BossNewGame_59: 1529853301
+      JSB_IngameVisuals_BossNewGame_6: 1788255615
+      JSB_IngameVisuals_BossNewGame_7: -58688531
+      JSB_IngameVisuals_BossNewGame_8: 165645621
+      JSB_IngameVisuals_BossNewGame_9: 1717396326
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

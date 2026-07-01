@@ -39,12 +39,12 @@ public class Barrage : MonoBehaviour
         
     }
 
-    //void OnTriggerEnter2D(Collider2D other)
-    //{
-    //    // 플레이어 태그와 충돌 시 처리 (Player 스크립트에서 사망/리스폰 처리)
-    //    if (other.CompareTag("Player"))
-    //    {
-    //        other.GetComponent<PlayerHP>()?.OnHit();
-    //    }
-    //}
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        // 플레이어 태그와 충돌 시 처리 (Player 스크립트에서 사망/리스폰 처리)
+        if (other.CompareTag("Player"))
+        {
+            other.GetComponent<PlayerHP>()?.TakeDamage();
+        }
+    }
 }

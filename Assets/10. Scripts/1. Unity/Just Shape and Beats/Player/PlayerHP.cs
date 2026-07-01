@@ -21,6 +21,7 @@ namespace Just_Shape_And_Beats
         private SpriteRenderer spriteRenderer;
 
 
+
         public void Start()
         {
             currentHP = maxHp;
@@ -32,14 +33,17 @@ namespace Just_Shape_And_Beats
 
         public void TakeDamage()
         {
-            if ((playerController != null && playerController.isDashing) || isHurt) return;
+            if (currentHP < 0) return;
+            {
+                if ((playerController != null && playerController.isDashing) || isHurt) return;
 
-            currentHP--;
-            Debug.Log($"플레이어 피격! 남은 체력: {currentHP}");
+                currentHP--;
+                Debug.Log($"플레이어 피격! 남은 체력: {currentHP}");
 
 
-            UpdatePlayerSprite();
-
+                UpdatePlayerSprite();
+            }
+                    
 
         }
 

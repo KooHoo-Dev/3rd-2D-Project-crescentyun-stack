@@ -28,8 +28,9 @@ namespace Just_Shape_And_Beats
         public float bulletSpeedMax = 6f;
 
         [Header("레이저")]
-        public GameObject layserPrefab;
-        public Transform layserSpawnPoint;
+        public GameObject laserPrefab;
+        public Transform laserSpawnPoint;
+        public float laserInterval = 1.0f;
         public LaserBeam[] lasers; // 
 
 
@@ -69,16 +70,17 @@ namespace Just_Shape_And_Beats
             while (true)
             {
                 SpawnRandomLaser();
-                yield return new WaitForSeconds(bulletInterval);
+                yield return new WaitForSeconds(laserInterval);
             }
         }
         
         void SpawnRandomLaser()
         {
-            if (layserPrefab == null || layserSpawnPoint == null) return;
+            if (laserPrefab == null || laserSpawnPoint == null) return;
             float angle = Random.Range(0f, 360f);
             Quaternion rot = Quaternion.Euler(0f, 0f, angle);
-            GameObject layser = Instantiate(layserPrefab, layserSpawnPoint.position, rot);
+            GameObject layser = Instantiate(laserPrefab, laserSpawnPoint.position, rot);
+
 
         }
 

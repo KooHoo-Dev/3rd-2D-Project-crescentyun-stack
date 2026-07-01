@@ -18,7 +18,7 @@ public class BossController : MonoBehaviour
     public SpikeField spikeField;           // 가시밭
 
     [Header("타이밍 설정")]
-    public float rotatePhaseDuration = 8f;
+    public float rotatePhaseDuration = 15f;
     public int punchCount = 3;
     public float punchInterval = 1.2f;
 
@@ -46,27 +46,18 @@ public class BossController : MonoBehaviour
     {
         triangleStack.SetRotating(true);
         triangleStack.StartCoroutine("RandomBulletLoop"); // 무작위 탄막
-        //triangleStack.FireLaserBurst();                   // 레이저 발사
+        triangleStack.StartCoroutine("RandomLaserLoop");  // 무작위 레이저
 
         yield return new WaitForSeconds(rotatePhaseDuration);
 
         triangleStack.SetRotating(false);
         triangleStack.StopCoroutine("RandomBulletLoop");
+        triangleStack.StopCoroutine("RandomLaserLoop");
     }
 
     IEnumerator Phase2_PunchSequence()
     {
-        for (int i = 0; i < punchCount; i++)
-        {
-            yield return StartCoroutine(fist.PunchOnce());
-
-            // 주먹이 꽂힐 때마다: 레이저 발사 + 삼각형이 안으로 들어감 + 언덕 상승
-            //triangleStack.FireLaserBurst();
-            triangleStack.SinkOneLevel();
-            yield return StartCoroutine(temple.RaiseHill());
-
-            yield return new WaitForSeconds(punchInterval);
-        }
+        yield return StartCoroutine(fist.PunchSequence());
     }
 
     IEnumerator Phase3_TempleAndDescent()
