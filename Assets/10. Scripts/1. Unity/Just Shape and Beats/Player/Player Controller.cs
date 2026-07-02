@@ -26,6 +26,7 @@ namespace Just_Shape_And_Beats
         public bool isDashing = false;
         private bool canDash = true;
         private bool isColliding = false;
+        public bool isTransitioning = false;
 
 
         [Header("넉백 설정")]
@@ -33,6 +34,7 @@ namespace Just_Shape_And_Beats
         public float knockbackDuration = 0.3f; // 이동 잠금 시간
 
         private bool isKnockedBack = false;    // 넉백 중이면 이동 불가
+
         private void Awake()
         {
             spriteRenderer = GetComponent<SpriteRenderer>();
@@ -47,6 +49,8 @@ namespace Just_Shape_And_Beats
         }
         private void Move()
         {
+            if (isKnockedBack || isTransitioning) return;
+
             if (Keyboard.current.leftArrowKey.isPressed == true)
             {
                 transform.position += Vector3.left * moveSpeed * Time.deltaTime;
@@ -67,7 +71,8 @@ namespace Just_Shape_And_Beats
         private void Dash()
         {
             if (isDashing == true) return;
-            
+
+            if (isKnockedBack || isTransitioning) return;
 
             if (Keyboard.current.spaceKey.wasPressedThisFrame && canDash == true)
             {
@@ -129,23 +134,23 @@ namespace Just_Shape_And_Beats
         }
               
 
-        private void OnTriggerEnter2D(Collider2D collider)
-        {                                    
-            if ((isColliding == false) && (collider.gameObject.CompareTag("Obstacle")))
-            {
-                // 장해물과의 충돌 로직
-                Debug.Log("충돌");
-                isColliding = true;
+        //private void OnTriggerEnter2D(Collider2D collider)
+        //{                                    
+        //    if ((isColliding == false) && (collider.gameObject.CompareTag("Obstacle")))
+        //    {
+        //        // 장해물과의 충돌 로직
+        //        Debug.Log("충돌");
+        //        isColliding = true;
                 
-                // 장애물 중심 → 플레이어 방향으로 넉백
-                Vector2 knockbackDir = (transform.position - collider.transform.position).normalized;
+        //        // 장애물 중심 → 플레이어 방향으로 넉백
+        //        Vector2 knockbackDir = (transform.position - collider.transform.position).normalized;
 
-                StartCoroutine(KnockbackCoroutine(knockbackDir));
+        //        StartCoroutine(KnockbackCoroutine(knockbackDir));
 
-                StartCoroutine(CollisionEffect());
+        //        StartCoroutine(CollisionEffect());
 
-            }
-        }
+        //    }
+        //}
 
     
         public IEnumerator KnockbackCoroutine(Vector2 direction)

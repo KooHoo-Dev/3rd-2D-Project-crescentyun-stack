@@ -113,7 +113,15 @@ namespace Just_Shape_And_Beats
 
             if (collision.CompareTag("Player") && isDeadly)
             {
+                Vector2 knockbackDir = (collision.transform.position - transform.position).normalized;
+                PlayerController playerController = collision.GetComponent<PlayerController>();
+
+                playerController.StartCoroutine(playerController.KnockbackCoroutine(knockbackDir));
+                playerController.StartCoroutine(playerController.CollisionEffect());
+
+
                 collision.GetComponent<PlayerHP>().TakeDamage();
+
             }
         }
     }

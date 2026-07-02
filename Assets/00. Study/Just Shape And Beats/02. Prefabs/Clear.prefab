@@ -105,6 +105,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49deb42596747a24b9735b3e54e3607d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Just_Shape_And_Beats.StageClear
+  stageTransition: {fileID: 0}
 --- !u!61 &8281675881375483784
 BoxCollider2D:
   m_ObjectHideFlags: 0
