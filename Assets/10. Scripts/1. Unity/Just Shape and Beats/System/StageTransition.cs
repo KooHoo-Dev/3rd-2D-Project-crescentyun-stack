@@ -80,6 +80,7 @@ namespace Just_Shape_And_Beats
             while (elapsed < riseDuration)
             {
                 elapsed += Time.deltaTime;
+                
                 float t = elapsed / riseDuration;
                 triangleTransform.position = Vector3.Lerp(playerPos, topPos, t);
                 triangleTransform.Rotate(Vector3.forward, rotateSpeed * Time.deltaTime);

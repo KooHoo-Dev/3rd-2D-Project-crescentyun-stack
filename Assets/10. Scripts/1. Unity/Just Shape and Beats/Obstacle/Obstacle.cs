@@ -42,7 +42,7 @@ namespace Just_Shape_And_Beats
         IEnumerator ObstacleRoutine()
         {
             Color originalColor = spriteRenderer.color; // 원본 색 저장
-            Vector3 originalScale = transform.localScale; // 원본 크기 저장
+            Vector3 currentScale = transform.localScale; // 원본 크기 저장
 
             //  1. 경고 - 반투명
             Color color = spriteRenderer.color;
@@ -65,7 +65,7 @@ namespace Just_Shape_And_Beats
                 spriteRenderer.color = new Color(255, 255, 255);
 
                 // 세로: 0 → 원본 크기
-                transform.localScale = new Vector3(originalScale.x, Mathf.Lerp(0f, originalScale.y, t), originalScale.z);
+                transform.localScale = new Vector3(currentScale.x, Mathf.Lerp(0f, currentScale.y, t), currentScale.z);
 
                 yield return null;
             }
@@ -83,7 +83,7 @@ namespace Just_Shape_And_Beats
             //spriteRenderer.color = originalColor;
             //    yield return new WaitForSeconds(flashInterval);
 
-
+            
             // 3. 공격 
             originalColor.a = 1f;
             spriteRenderer.color = originalColor;
@@ -100,7 +100,7 @@ namespace Just_Shape_And_Beats
             {
                 elapsed += Time.deltaTime;
                 float t = elapsed / shrinkDuration;
-                transform.localScale = Vector3.Lerp(originalScale, Vector3.zero, t);
+                transform.localScale = Vector3.Lerp(currentScale, Vector3.zero, t);
                 yield return null;
             }
 

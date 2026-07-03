@@ -20,7 +20,7 @@ namespace Just_Shape_And_Beats
 
         private int currentStageIndex = 0;
         private bool isMusicStarted = false;
-        private bool isTriangleSpawned = false; // 💡 현재 화면에 삼각형이 떠 있는 상태인가?
+        private bool isTriangleSpawned = false; 
 
         void Awake()
         {
@@ -30,12 +30,12 @@ namespace Just_Shape_And_Beats
         void Start()
         {
             if (audioSource == null) audioSource = GetComponent<AudioSource>();
-            audioSource.loop = false; // 우리가 수동 제어하므로 무조건 false
+            audioSource.loop = false; // 처음 노래 끄기
 
             // 게임 시작하자마자 첫 번째 시작용 삼각형 스폰
             isTriangleSpawned = true;
             SpawnTriangle();
-            Debug.Log("[시스템] 준비 완료. 첫 번째 삼각형을 먹으면 음악이 시작됩니다.");
+            Debug.Log("1라운드 시작 준비 완료. 첫 번째 삼각형을 먹으면 음악이 시작됩니다.");
         }
 
         void Update()
