@@ -1308,13 +1308,25 @@ MonoBehaviour:
     loopEndTime: 59
     spawner: {fileID: 1309927861}
   - stageNumber: 5
-    loopStartTime: 59
-    loopEndTime: 73
+    loopStartTime: 58
+    loopEndTime: 72
     spawner: {fileID: 2089131816}
   - stageNumber: 6
-    loopStartTime: 74
+    loopStartTime: 72
     loopEndTime: 86
-    spawner: {fileID: 0}
+    spawner: {fileID: 354212479}
+  - stageNumber: 7
+    loopStartTime: 73
+    loopEndTime: 100
+    spawner: {fileID: 1048818112}
+  - stageNumber: 8
+    loopStartTime: 101
+    loopEndTime: 115
+    spawner: {fileID: 1650028}
+  - stageNumber: 9
+    loopStartTime: 116
+    loopEndTime: 171
+    spawner: {fileID: 1229726994}
   trianglePrefab: {fileID: 9220238594233659990, guid: 8b9c89a89e541924e8031b36df306e13, type: 3}
   triangleSpawnPoint: {fileID: 2045376367}
 --- !u!4 &1683017379

@@ -26,7 +26,7 @@ namespace Just_Shape_And_Beats
             if (gearWall != null)
                 gearWall.SetActive(false);
             if (gearWall2 != null)
-                gearWall2.SetActive(true);
+                gearWall2.SetActive(false);
         }
     }
 }

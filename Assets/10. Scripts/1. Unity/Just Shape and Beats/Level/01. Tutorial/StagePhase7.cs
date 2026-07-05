@@ -16,7 +16,7 @@ namespace Just_Shape_And_Beats
         protected virtual void OnEnable()
         {
             StartCoroutine(SpawnColumnRoutine());
-            Invoke("SpawnClearTriangle", 30f);
+            Invoke("SpawnClearTriangle", 10f);
         }
 
         protected virtual void OnDisable()
