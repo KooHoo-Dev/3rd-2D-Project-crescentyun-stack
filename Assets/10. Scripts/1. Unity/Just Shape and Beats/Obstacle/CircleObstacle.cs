@@ -19,6 +19,7 @@ namespace Just_Shape_And_Beats
         void Start()
         {
             col = GetComponent<Collider2D>();
+            
             if (col != null) col.enabled = false;
 
             filledCircle.gameObject.SetActive(false);
@@ -56,12 +57,17 @@ namespace Just_Shape_And_Beats
 
         void OnTriggerEnter2D(Collider2D collision)
         {
+            Debug.Log($"충돌 감지: {collision.gameObject.tag}");
             if (collision.CompareTag("Player"))
             {
+                Debug.Log("플레이어 충돌!");
                 Vector2 knockbackDir = (collision.transform.position - transform.position).normalized;
                 PlayerController pc = collision.GetComponent<PlayerController>();
                 if (pc != null)
+                {
                     pc.StartCoroutine(pc.KnockbackCoroutine(knockbackDir));
+                    pc.StartCoroutine(pc.CollisionEffect()); // 이거 추가
+                }
 
                 collision.GetComponent<PlayerHP>()?.TakeDamage();
             }

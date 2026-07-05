@@ -133,7 +133,7 @@ namespace Just_Shape_And_Beats
 
         }
               
-
+        // obstacle로 옴겼음
         //private void OnTriggerEnter2D(Collider2D collider)
         //{                                    
         //    if ((isColliding == false) && (collider.gameObject.CompareTag("Obstacle")))

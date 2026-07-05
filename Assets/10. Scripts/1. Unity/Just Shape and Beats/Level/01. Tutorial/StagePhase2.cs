@@ -11,21 +11,21 @@ namespace Just_Shape_And_Beats
         [Header("고정 스폰 위치")]
         public float topTargetY = 3f;       // 위쪽 탄막이 멈출 Y 위치
         public float bottomTargetY = -3f;   // 아래쪽 탄막이 멈출 Y 위치
-        public float targetX = 0f;          // 탄막이 멈출 X 위치 (화면 중앙)
+        public float targetX = 4f;          // 탄막이 멈출 X 위치 (화면 중앙)
         public float offScreenOffset = 8f;  // 화면 밖 시작 거리
 
         [Header("슬라이드 진입")]
         public float slideDuration = 0.5f;  // 화면 밖에서 진입하는 시간
 
         [Header("성장/폭발 설정")]
-        public float growDuration = 1.5f;
+        public float growDuration = 1f;
         public float startScale = 0.2f;
-        public float endScale = 1.5f;
+        public float endScale = 0.5f;
 
         [Header("8방향 탄막")]
         public GameObject subBulletPrefab;
         public float subBulletSpeed = 4f;
-        public float subBulletScale = 0.3f;
+        public float subBulletScale = 0.1f;
 
         [Header("스폰 패턴")]
         public float spawnInterval = 2f;    // 위/아래 각각 발동 간격
