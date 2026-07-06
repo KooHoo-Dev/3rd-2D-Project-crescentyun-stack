@@ -85,8 +85,8 @@ namespace Just_Shape_And_Beats
 
         public void OnGameStart()
         {
+            TransitionManager.GoTo("01. Stage", TransitionManager.TransitionType.MainToStage);
             
-                SceneManager.LoadScene("02. Stage");
         }
 
         public void OnEnd()

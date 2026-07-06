@@ -82,7 +82,13 @@ namespace Just_Shape_And_Beats
             {
                 isInLeftCircle = inLeft;
                 if (leftPreviewImage != null) leftPreviewImage.SetActive(inLeft);
-                if (leftAudioSource != null) leftAudioSource.Play();
+                if (leftAudioSource != null)
+                {
+                    if (inLeft) leftAudioSource.Play();
+                    else leftAudioSource.Stop();
+                }
+
+
             }
 
             // 오른쪽 원 진입/이탈
@@ -90,7 +96,11 @@ namespace Just_Shape_And_Beats
             {
                 isInRightCircle = inRight;
                 if (rightPreviewImage != null) rightPreviewImage.SetActive(inRight);
-                if (rightAudioSource != null) rightAudioSource.Play();
+                if (rightAudioSource != null)
+                {
+                    if (inRight) rightAudioSource.Play();
+                    else rightAudioSource.Stop();
+                }
             }
         }
 
@@ -107,9 +117,9 @@ namespace Just_Shape_And_Beats
             if (Keyboard.current.enterKey.wasPressedThisFrame)
             {
                 if (isInLeftCircle)
-                    SceneManager.LoadScene("02. Tutorial");
+                    TransitionManager.GoTo("02. Tutorial", TransitionManager.TransitionType.StageToTutorial);
                 else if (isInRightCircle)
-                    SceneManager.LoadScene("04. New Game(Boss)");
+                    TransitionManager.GoTo("04. New Game(Boss)", TransitionManager.TransitionType.StageToNewGame);
             }
         }
     }

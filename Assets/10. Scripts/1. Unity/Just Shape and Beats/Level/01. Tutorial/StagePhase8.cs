@@ -8,11 +8,11 @@ namespace Just_Shape_And_Beats
         [Header("원 패턴")]
         public GameObject circlePrefab;
         public int circleCount = 6;
-        public float circleSpacing = 2f;
-        public float topRowY = 4f;
-        public float bottomRowY = -4f;
+        public float circleSpacing = 2.5f;
+        public float topRowY = 2.8f;
+        public float bottomRowY = -2.8f;
         public float rowStartX = -5f;
-        public float circleInterval = 0.5f;
+        public float circleInterval = 0.1f;
         public float loopInterval = 1f;
 
         protected override void OnEnable()

@@ -173,8 +173,6 @@ namespace Just_Shape_And_Beats
             isKnockedBack = false;
         }
 
-
-
         public IEnumerator CollisionEffect()
         {
             Color origin = spriteRenderer.color;
@@ -193,6 +191,7 @@ namespace Just_Shape_And_Beats
 
             isColliding = false;
         }
+
 
 
 

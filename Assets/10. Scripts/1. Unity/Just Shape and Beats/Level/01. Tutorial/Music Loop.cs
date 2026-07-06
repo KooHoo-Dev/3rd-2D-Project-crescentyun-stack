@@ -80,15 +80,15 @@ namespace Just_Shape_And_Beats
                 return;
             }
 
-            // 2. 2~5단계 진행 중 삼각형을 먹었을 때
+            // 2. 2~9단계 진행 중 삼각형을 먹었을 때
             isTriangleSpawned = false; // 삼각형 먹었으니 플래그 해제
             currentStageIndex++;
 
-            // 5단계까지 다 깨고 마지막 삼각형을 먹었다면 보스 씬으로!
+            // 9단계까지 다 깨고 마지막 삼각형을 먹었다면 클리어
             if (currentStageIndex >= stageSegments.Count)
             {
-                Debug.Log("[시스템] 모든 튜토리얼 통과! 보스 씬으로 씬을 전환합니다.");
-                SceneManager.LoadScene("Scene_Boss");
+                Debug.Log("[시스템] 모든 튜토리얼 통과! 클리어 화면으로 전환합니다.");
+                TransitionManager.GoTo("01. Stage", TransitionManager.TransitionType.TutorialClear);
                 return;
             }
 
@@ -104,23 +104,25 @@ namespace Just_Shape_And_Beats
 
         void ApplyStageSettings()
         {
-            // 모든 스포너 일단 끄기
-            foreach (var segment in stageSegments)
-            {
-                if (segment.spawner != null) segment.spawner.SetActive(false);
-            }
+            CancelInvoke("OnStagePatternFinished");
 
-            // 현재 단계 스포너만 켜기
+            foreach (var segment in stageSegments)
+                if (segment.spawner != null) segment.spawner.SetActive(false);
+
             AudioStageSegment currentSegment = stageSegments[currentStageIndex];
             if (currentSegment.spawner != null)
             {
                 currentSegment.spawner.SetActive(true);
-                Debug.Log($"[스포너] {currentStageIndex + 1}단계 스포너({currentSegment.spawner.name})가 활성화되었습니다.");
+
+                // 마지막 스테이지면 루프 끊기
+                if (currentStageIndex == stageSegments.Count - 1)
+                {
+                    audioSource.loop = false; // 루프 해제
+                    Debug.Log("[시스템] 마지막 스테이지 - 루프 해제");
+                }
             }
             else
             {
-                // 1단계처럼 스포너가 없는 평화로운 구간이라면, 10초 버틴 후 자동으로 삼각형이 나오게 설정
-                Debug.Log($"[타이머] {currentStageIndex + 1}단계는 평화 구간입니다. 10초 후 삼각형이 나옵니다.");
                 Invoke("OnStagePatternFinished", 10f);
             }
         }

@@ -66,7 +66,7 @@ namespace Just_Shape_And_Beats
                 if (pc != null)
                 {
                     pc.StartCoroutine(pc.KnockbackCoroutine(knockbackDir));
-                    pc.StartCoroutine(pc.CollisionEffect()); // 이거 추가
+                    pc.StartCoroutine(pc.CollisionEffect()); 
                 }
 
                 collision.GetComponent<PlayerHP>()?.TakeDamage();

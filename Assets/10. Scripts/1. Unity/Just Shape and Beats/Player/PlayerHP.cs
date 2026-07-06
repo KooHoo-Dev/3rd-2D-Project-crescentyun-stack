@@ -8,7 +8,6 @@ namespace Just_Shape_And_Beats
 {
     public class PlayerHP : MonoBehaviour
     {
-       
 
         public int maxHp = 5;
         private int currentHP;
@@ -35,7 +34,7 @@ namespace Just_Shape_And_Beats
             playerController = GetComponent<PlayerController>();
             rb2D = GetComponent<Rigidbody2D>();
             spriteRenderer = GetComponent<SpriteRenderer>();
-            
+
 
         }
 
@@ -52,18 +51,38 @@ namespace Just_Shape_And_Beats
 
                 UpdatePlayerSprite();
             }
-            
+
             if (currentHP < 0)
             {
                 Die();
             }
 
+            StartCoroutine(InvincibilityRoutine());
+
         }
+
+        IEnumerator InvincibilityRoutine()
+        {
+            Collider2D col = GetComponent<Collider2D>();
+            if (col != null) col.enabled = false;
+
+            float elapsed = 0f;
+            while (elapsed < invincibilityDuration)
+            {
+                spriteRenderer.enabled = !spriteRenderer.enabled;
+                yield return new WaitForSeconds(0.1f);
+                elapsed += 0.1f;
+            }
+
+            spriteRenderer.enabled = true;
+            if (col != null) col.enabled = true;
+        }
+
 
 
         public void UpdatePlayerSprite()
         {
-            
+
             if (spriteRenderer == null || HpSprites == null) return;
 
             // HpSprites 배열을 HP 높은 순으로 할당
@@ -72,7 +91,7 @@ namespace Just_Shape_And_Beats
             if (index >= 0 && index < HpSprites.Length)
             {
                 spriteRenderer.sprite = HpSprites[index];
-               
+
             }
         }
 
@@ -86,6 +105,9 @@ namespace Just_Shape_And_Beats
 
             StartCoroutine(GameOverRoutine());
         }
+
+
+
 
         IEnumerator GameOverRoutine()
         {

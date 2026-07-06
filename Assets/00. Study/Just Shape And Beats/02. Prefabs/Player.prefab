@@ -71,17 +71,17 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.37682176, y: -0.40597993}
+  m_Offset: {x: 0.0042700768, y: -0.004176855}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
+    oldSize: {x: 0.46, y: 0.46}
+    newSize: {x: 0.46, y: 0.46}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.20063162, y: 0.20328188}
+  m_Size: {x: 0.9959507, y: 1.0068879}
   m_EdgeRadius: 0
 --- !u!50 &8767802076545400160
 Rigidbody2D:
@@ -159,12 +159,12 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 21300000, guid: fab06e0be9375cc4d823efa71629885c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 26308ae19e11bf94ca7a31275f7ebeaa, type: 3}
   m_Color: {r: 0, g: 1, b: 0.99020815, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.46, y: 0.46}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -185,6 +185,9 @@ MonoBehaviour:
   dashTime: 0.2
   dashCooltime: 0.2
   isDashing: 0
+  isTransitioning: 0
+  knockbackForce: 8
+  knockbackDuration: 0.3
 --- !u!114 &4840217439940056178
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -215,8 +218,10 @@ MonoBehaviour:
   maxHp: 4
   knockbackPower: 10
   invincibilityDuration: 1.5
-  healthSprites:
+  HpSprites:
+  - {fileID: 21300000, guid: 076e857b3afe0e24ea300f05fb84b914, type: 3}
+  - {fileID: 21300000, guid: 744ef3024ca9e3c4bb7ef8aa826c6b05, type: 3}
+  - {fileID: 21300000, guid: 2b7edb758994886458f8d42609b098b4, type: 3}
   - {fileID: 21300000, guid: a818881b10a52764195e209c89c3c9eb, type: 3}
-  - {fileID: 21300000, guid: 4a2f4779df00b244bb11ee2543f699b4, type: 3}
-  - {fileID: 21300000, guid: 92a662fbdb411d648ae5048f7ff7e161, type: 3}
-  - {fileID: 21300000, guid: 453978751a0774746af2b380b6562be8, type: 3}
+  gameOverSceneName: GameOver
+  gameOverDelay: 1

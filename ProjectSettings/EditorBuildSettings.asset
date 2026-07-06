@@ -18,8 +18,14 @@ EditorBuildSettings:
     path: Assets/00. Study/Just Shape And Beats/01. Scene/04. New Game(Boss).unity
     guid: 11dc89c0ff648af4e8f4cd097b82a8a1
   - enabled: 1
+    path: Assets/00. Study/Just Shape And Beats/01. Scene/98. Transition.unity
+    guid: b4286930d89e4b6488a767f622cf0023
+  - enabled: 1
     path: Assets/00. Study/Just Shape And Beats/01. Scene/99. GameOver.unity
     guid: 84d5141d6bfa908419e52581e9a510ca
+  - enabled: 1
+    path: Assets/00. Study/Just Shape And Beats/01. Scene/100. Credit.unity
+    guid: d67b9cc8c1a0dde4daaf271f7ce8eb54
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_UseUCBPForAssetBundles: 0

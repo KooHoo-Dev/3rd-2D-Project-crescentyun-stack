@@ -168,7 +168,7 @@ MonoBehaviour:
   destroyX: -12
   moveSpeed: 3
   spawnInterval: 3
-  spawnY: 0
+  spawnY: 3.5
   circlePrefab: {fileID: 3276038358480797237, guid: 14ee7fdb76f54e84dbd04abc1a0f795a, type: 3}
   circleCount: 6
   circleSpacing: 2.5
@@ -953,13 +953,14 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1229726995}
+  - component: {fileID: 1229726996}
   m_Layer: 0
   m_Name: Phase9
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1229726995
 Transform:
   m_ObjectHideFlags: 0
@@ -975,6 +976,54 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1602649023}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1229726996
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1229726994}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a732442cfc87cd34d9873b9a624d01d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Just_Shape_And_Beats.StagePhase9
+  mainBulletPrefab: {fileID: 8540807377860919988, guid: eab69a966fcc27c4390095a6fb156e8a, type: 3}
+  topTargetY: 3
+  bottomTargetY: -3
+  targetX: 4
+  offScreenOffset: 8
+  slideDuration: 0.5
+  growDuration: 2
+  startScale: 0.2
+  endScale: 0.5
+  subBulletPrefab: {fileID: 682711570516537966, guid: d51446c874875ea44ba24df89f509d81, type: 3}
+  subBulletSpeed: 4
+  subBulletScale: 0.1
+  spawnInterval: 2
+  circlePrefab: {fileID: 3276038358480797237, guid: 14ee7fdb76f54e84dbd04abc1a0f795a, type: 3}
+  rowCircleCount: 6
+  rowCircleSpacing: 2
+  topRowY: 4
+  bottomRowY: -4
+  rowStartX: -5
+  rowCircleInterval: 0.5
+  laserPrefab: {fileID: 2608116346877070366, guid: 625cd6b0e8edc1d4f8b39f948d2e5baa, type: 3}
+  laserSpawnInterval: 1.5
+  laserLength: 20
+  halfColumnPrefab: {fileID: 8524845817921983468, guid: 8aab4776ba174e143a836f4a1f03d185, type: 3}
+  columnSpawnX: 12
+  columnDestroyX: -12
+  columnMoveSpeed: 3
+  columnSpawnInterval: 2
+  columnHalfY: 0
+  colCircleCount: 6
+  colCircleSpacing: 1.5
+  colCircleX: 0
+  colStartY: -4
+  colCircleInterval: 0.4
+  colLoopInterval: 1
+  clearTriangleDelay: 60
 --- !u!1 &1309927861
 GameObject:
   m_ObjectHideFlags: 0
@@ -1032,7 +1081,7 @@ MonoBehaviour:
   subBulletSpeed: 4
   subBulletScale: 0.1
   spawnInterval: 2
-  verticalLaserPrefab: {fileID: 2368517966408400788, guid: 493d3986df7be0a43976cfed27473fea, type: 3}
+  verticalLaserPrefab: {fileID: 7307294240842878174, guid: 65968e3e6d6ad3c4b86b730798379bc6, type: 3}
   centerX: 0
   sideOffset: 2
   overrideLaserDuration: 1
@@ -1099,7 +1148,7 @@ MonoBehaviour:
   subBulletSpeed: 4
   subBulletScale: 0.1
   spawnInterval: 2
-  verticalLaserPrefab: {fileID: 2368517966408400788, guid: 493d3986df7be0a43976cfed27473fea, type: 3}
+  verticalLaserPrefab: {fileID: 7307294240842878174, guid: 65968e3e6d6ad3c4b86b730798379bc6, type: 3}
   laserStartX: 0
   laserSpacing: 0.5
   laserCount: 9
@@ -1308,7 +1357,7 @@ MonoBehaviour:
     loopEndTime: 59
     spawner: {fileID: 1309927861}
   - stageNumber: 5
-    loopStartTime: 58
+    loopStartTime: 59
     loopEndTime: 72
     spawner: {fileID: 2089131816}
   - stageNumber: 6
@@ -1316,7 +1365,7 @@ MonoBehaviour:
     loopEndTime: 86
     spawner: {fileID: 354212479}
   - stageNumber: 7
-    loopStartTime: 73
+    loopStartTime: 87
     loopEndTime: 100
     spawner: {fileID: 1048818112}
   - stageNumber: 8
@@ -1494,7 +1543,7 @@ MonoBehaviour:
   subBulletSpeed: 4
   subBulletScale: 0.1
   spawnInterval: 2
-  verticalLaserPrefab: {fileID: 2368517966408400788, guid: 493d3986df7be0a43976cfed27473fea, type: 3}
+  verticalLaserPrefab: {fileID: 7307294240842878174, guid: 65968e3e6d6ad3c4b86b730798379bc6, type: 3}
   centerX: 0
   sideOffset: 2
   overrideLaserDuration: 1
@@ -1516,6 +1565,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2158593263542218821, guid: 14f13198cad7c8f43a640947c6c1a25c, type: 3}
+      propertyPath: m_Size.x
+      value: 1.0208106
+      objectReference: {fileID: 0}
+    - target: {fileID: 2158593263542218821, guid: 14f13198cad7c8f43a640947c6c1a25c, type: 3}
+      propertyPath: m_Size.y
+      value: 1.0234575
+      objectReference: {fileID: 0}
+    - target: {fileID: 2158593263542218821, guid: 14f13198cad7c8f43a640947c6c1a25c, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.00012755394
+      objectReference: {fileID: 0}
+    - target: {fileID: 2158593263542218821, guid: 14f13198cad7c8f43a640947c6c1a25c, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.004107833
+      objectReference: {fileID: 0}
     - target: {fileID: 4844395066554104132, guid: 14f13198cad7c8f43a640947c6c1a25c, type: 3}
       propertyPath: m_LocalPosition.x
       value: -6.01
@@ -1566,24 +1631,24 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5388683766854497143, guid: 14f13198cad7c8f43a640947c6c1a25c, type: 3}
       propertyPath: HpSprites.Array.size
-      value: 0
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 5388683766854497143, guid: 14f13198cad7c8f43a640947c6c1a25c, type: 3}
       propertyPath: 'HpSprites.Array.data[0]'
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 21300000, guid: 076e857b3afe0e24ea300f05fb84b914, type: 3}
     - target: {fileID: 5388683766854497143, guid: 14f13198cad7c8f43a640947c6c1a25c, type: 3}
       propertyPath: 'HpSprites.Array.data[1]'
       value: 
-      objectReference: {fileID: 21300000, guid: 076e857b3afe0e24ea300f05fb84b914, type: 3}
+      objectReference: {fileID: 21300000, guid: 744ef3024ca9e3c4bb7ef8aa826c6b05, type: 3}
     - target: {fileID: 5388683766854497143, guid: 14f13198cad7c8f43a640947c6c1a25c, type: 3}
       propertyPath: 'HpSprites.Array.data[2]'
       value: 
-      objectReference: {fileID: 21300000, guid: 744ef3024ca9e3c4bb7ef8aa826c6b05, type: 3}
+      objectReference: {fileID: 21300000, guid: 2b7edb758994886458f8d42609b098b4, type: 3}
     - target: {fileID: 5388683766854497143, guid: 14f13198cad7c8f43a640947c6c1a25c, type: 3}
       propertyPath: 'HpSprites.Array.data[3]'
       value: 
-      objectReference: {fileID: 21300000, guid: 2b7edb758994886458f8d42609b098b4, type: 3}
+      objectReference: {fileID: 21300000, guid: a818881b10a52764195e209c89c3c9eb, type: 3}
     - target: {fileID: 5388683766854497143, guid: 14f13198cad7c8f43a640947c6c1a25c, type: 3}
       propertyPath: 'HpSprites.Array.data[4]'
       value: 
