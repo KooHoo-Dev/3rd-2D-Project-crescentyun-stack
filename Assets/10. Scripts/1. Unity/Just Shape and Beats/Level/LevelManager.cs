@@ -1,63 +1,116 @@
-using System.Diagnostics;
 using UnityEngine;
-using UnityEngine.SceneManagement; // 씬 전환을 위해 추가
-using UnityEngine.UI;           // UI 컴포넌트 접근을 위해 추가
+using UnityEngine.SceneManagement;
+using UnityEngine.InputSystem;
 
 namespace Just_Shape_And_Beats
 {
     public class LevelManager : MonoBehaviour
     {
-        [Header("UI Buttons")]
-        [SerializeField] private Button tutorial;
-        [SerializeField] private Button newGame;
+        [Header("원 트리거 오브젝트")]
+        public Transform leftCircle;        // 왼쪽 원 중심
+        public Transform rightCircle;       // 오른쪽 원 중심
+        public float circleRadius = 1f;     // 원 반경
+
+        [Header("플레이어")]
+        public Transform playerTransform;
+        public float moveSpeed = 5f;
+
+        [Header("점선 이동 경로")]
+        public Transform leftPoint;         // 왼쪽 끝 이동 포인트
+        public Transform rightPoint;        // 오른쪽 끝 이동 포인트
+
+        [Header("미리보기 스프라이트")]
+        public GameObject leftPreviewImage;  // 왼쪽 원에 있을 때 표시할 이미지
+        public GameObject rightPreviewImage; // 오른쪽 원에 있을 때 표시할 이미지
 
 
-        private void Update()
+        public AudioSource leftAudioSource;
+        public AudioSource rightAudioSource;
+
+
+        private bool isInLeftCircle = false;
+        private bool isInRightCircle = false;
+
+        void Start()
         {
-            if (Input.GetKeyDown(KeyCode.Escape))
+            // 처음엔 미리보기 이미지 전부 숨김
+            if (leftPreviewImage != null) leftPreviewImage.SetActive(false);
+            if (rightPreviewImage != null) rightPreviewImage.SetActive(false);
+        }
+
+        void Update()
+        {
+            MovePlayer();
+            CheckCircleZone();
+            HandleInput();
+        }
+
+        void MovePlayer()
+        {
+            if (playerTransform == null || leftPoint == null || rightPoint == null) return;
+
+            // 좌우 키 입력으로 점선 경로 위에서만 이동
+            float input = 0f;
+            if (Keyboard.current.leftArrowKey.isPressed) input = -1f;
+            if (Keyboard.current.rightArrowKey.isPressed) input = 1f;
+
+            Vector3 newPos = playerTransform.position + Vector3.right * input * moveSpeed * Time.deltaTime;
+
+            // 왼쪽/오른쪽 끝 클램프
+            float minX = Mathf.Min(leftPoint.position.x, rightPoint.position.x);
+            float maxX = Mathf.Max(leftPoint.position.x, rightPoint.position.x);
+            newPos.x = Mathf.Clamp(newPos.x, minX, maxX);
+            newPos.y = leftPoint.position.y; // Y는 고정 (점선 위)
+
+            playerTransform.position = newPos;
+        }
+
+        void CheckCircleZone()
+        {
+            if (playerTransform == null) return;
+
+            // 왼쪽 원 범위 체크
+            bool inLeft = leftCircle != null &&
+                Vector2.Distance(playerTransform.position, leftCircle.position) <= circleRadius;
+
+            // 오른쪽 원 범위 체크
+            bool inRight = rightCircle != null &&
+                Vector2.Distance(playerTransform.position, rightCircle.position) <= circleRadius;
+
+            // 왼쪽 원 진입/이탈
+            if (inLeft != isInLeftCircle)
             {
-                ReturnToMainMenu();
+                isInLeftCircle = inLeft;
+                if (leftPreviewImage != null) leftPreviewImage.SetActive(inLeft);
+                if (leftAudioSource != null) leftAudioSource.Play();
+            }
+
+            // 오른쪽 원 진입/이탈
+            if (inRight != isInRightCircle)
+            {
+                isInRightCircle = inRight;
+                if (rightPreviewImage != null) rightPreviewImage.SetActive(inRight);
+                if (rightAudioSource != null) rightAudioSource.Play();
             }
         }
 
-
-        private void Start()
+        void HandleInput()
         {
-            // 게임 시작 시 'Game Start' 버튼이 자동으로 키보드 포커스(선택)를 받도록 설정
-            if (tutorial != null)
+            // ESC → 메인 씬
+            if (Keyboard.current.escapeKey.wasPressedThisFrame)
             {
-                tutorial.Select();
+                SceneManager.LoadScene("00. Main");
+                return;
             }
 
-            // 마우스 클릭 시 실행될 함수 연결
-            if (tutorial != null) tutorial.onClick.AddListener(Tutorial);
-            if (newGame != null) newGame.onClick.AddListener(NewGame);
-        }
-
-        /// <summary>
-        /// Game Start 버튼을 누르거나 선택 후 Enter를 치면 실행되는 함수
-        /// </summary>
-        public void Tutorial()
-        {
-
-            SceneManager.LoadScene("02. Tutorial");
-        }
-
-        /// <summary>
-        /// END 버튼을 누르거나 선택 후 Enter를 치면 실행되는 함수
-        /// </summary>
-        public void NewGame()
-        {
-
-
-            SceneManager.LoadScene("04. New Game(Boss)");
-        }
-
-
-        public void ReturnToMainMenu()
-        {
-            SceneManager.LoadScene("00. Main");
+            // Enter → 씬 전환
+            if (Keyboard.current.enterKey.wasPressedThisFrame)
+            {
+                if (isInLeftCircle)
+                    SceneManager.LoadScene("02. Tutorial");
+                else if (isInRightCircle)
+                    SceneManager.LoadScene("04. New Game(Boss)");
+            }
         }
     }
-
 }

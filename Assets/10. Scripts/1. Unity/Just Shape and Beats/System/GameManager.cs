@@ -1,47 +1,100 @@
 using UnityEngine;
-using UnityEngine.SceneManagement; // 씬 전환을 위해 추가
-using UnityEngine.UI;           // UI 컴포넌트 접근을 위해 추가
+using UnityEngine.SceneManagement;
+using UnityEngine.InputSystem;
+using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
 namespace Just_Shape_And_Beats
 {
     public class GameManager : MonoBehaviour
     {
-        [Header("UI Buttons")]
-        [SerializeField] private Button gameStartButton;
-        [SerializeField] private Button endButton;
+        [Header("버튼 오브젝트")]
+        public Button gameStartButton;
+        public Button endButton;
 
-        private void Start()
+        [Header("버튼 SpriteRenderer")]
+        public SpriteRenderer gameStartRenderer;
+        public SpriteRenderer endRenderer;
+
+        [Header("스프라이트")]
+        public Sprite normalSprite;     
+        public Sprite selectedSprite;   
+               
+        private int selectedIndex = 0;
+        private Button[] buttons;
+        private SpriteRenderer[] renderers;
+
+        void Start()
         {
-            // 게임 시작 시 'Game Start' 버튼이 자동으로 키보드 포커스(선택)를 받도록 설정
-            if (gameStartButton != null)
+            buttons = new Button[] { gameStartButton, endButton };
+            renderers = new SpriteRenderer[] { gameStartRenderer, endRenderer };
+
+            gameStartButton.onClick.AddListener(OnGameStart);
+            endButton.onClick.AddListener(OnEnd);
+
+            // 마우스 호버 이벤트 연결
+            AddHoverEvent(gameStartButton, 0);
+            AddHoverEvent(endButton, 1);
+
+            UpdateButtonVisual();
+        }
+
+        void Update()
+        {
+            if (Keyboard.current.upArrowKey.wasPressedThisFrame)
             {
-                gameStartButton.Select();
+                selectedIndex = (selectedIndex - 1 + buttons.Length) % buttons.Length;
+                UpdateButtonVisual();
+            }
+            if (Keyboard.current.downArrowKey.wasPressedThisFrame)
+            {
+                selectedIndex = (selectedIndex + 1) % buttons.Length;
+                UpdateButtonVisual();
             }
 
-            // 마우스 클릭 시 실행될 함수 연결
-            if (gameStartButton != null) gameStartButton.onClick.AddListener(OnGameStart);
-            if (endButton != null) endButton.onClick.AddListener(OnGameEnd);
+            if (Keyboard.current.enterKey.wasPressedThisFrame)
+            {
+                buttons[selectedIndex].onClick.Invoke();
+            }
         }
 
-        /// <summary>
-        /// Game Start 버튼을 누르거나 선택 후 Enter를 치면 실행되는 함수
-        /// </summary>
+        void AddHoverEvent(Button button, int index)
+        {
+            EventTrigger trigger = button.gameObject.GetComponent<EventTrigger>();
+            if (trigger == null) trigger = button.gameObject.AddComponent<EventTrigger>();
+
+            EventTrigger.Entry enterEntry = new EventTrigger.Entry();
+            enterEntry.eventID = EventTriggerType.PointerEnter;
+            int capturedIndex = index;
+            enterEntry.callback.AddListener((data) =>
+            {
+                selectedIndex = capturedIndex;
+                UpdateButtonVisual();
+            });
+            trigger.triggers.Add(enterEntry);
+        }
+
+        void UpdateButtonVisual()
+        {
+            for (int i = 0; i < renderers.Length; i++)
+            {
+                if (renderers[i] != null)
+                    renderers[i].sprite = (i == selectedIndex) ? selectedSprite : normalSprite;
+            }
+        }
+
         public void OnGameStart()
         {
-            Debug.Log("Game Start: 01.stage 씬으로 이동합니다.");
-            SceneManager.LoadScene("01. Stage");
+            
+                SceneManager.LoadScene("02. Stage");
         }
 
-        /// <summary>
-        /// END 버튼을 누르거나 선택 후 Enter를 치면 실행되는 함수
-        /// </summary>
-        public void OnGameEnd()
+        public void OnEnd()
         {
-            Debug.Log("END: 게임을 종료합니다.");
 #if UNITY_EDITOR
-            UnityEditor.EditorApplication.isPlaying = false; // 에디터에서 테스트할 때 종료
+            UnityEditor.EditorApplication.isPlaying = false;
 #else
-            Application.Quit(); // 빌드된 게임에서 종료
+            Application.Quit();
 #endif
         }
     }
