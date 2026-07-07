@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 namespace Just_Shape_And_Beats
 {
@@ -247,7 +248,8 @@ namespace Just_Shape_And_Beats
                 yield return null;
             }
 
-            // 씬 전환 (나중에 추가)
+            // 씬 전환
+            SceneManager.LoadScene("01. Stage");
         }
     }
 }
